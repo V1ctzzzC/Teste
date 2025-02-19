@@ -1,1 +1,8 @@
-runtime: python37
+runtime: python311
+entrypoint: gunicorn -b :8080 app:app  # Substitua "app:app" pelo seu módulo Flask
+
+handlers:
+  - url: /.*
+    script: auto
+env_variables:
+  GOOGLE_CLOUD_BUCKET: "testevh"
