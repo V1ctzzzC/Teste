@@ -16,7 +16,7 @@ def read_json_from_gcs():
         json_data = blob.download_as_text()
         return json.loads(json_data)
     except Exception as e:
-        return {"error": f"Erro ao ler o arquivo JSON =)): {e}"}
+        return {"error": f"Erro ao ler o arquivo JSON !!!: {e}"}
 
 @app.route('/')
 def hello():
